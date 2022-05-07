@@ -39,11 +39,8 @@ class Game:
 
     def player_guess_number_wins(self):
         guesses_number = 0
-        for indx, player in enumerate(self.player_list):
-            if indx != len(self.player_list):
+        for player in self.player_list:
                 guesses_number += player.playerguess(self.turn, guesses_number)
-            else:
-                player.playerguess(self.turn, guesses_number)
 
     def eval_which_player_wins_round(self) -> Type[Player]:
         get_start_player_card_type = self.player_list[0].card_in_play

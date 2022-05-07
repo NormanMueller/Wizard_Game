@@ -26,14 +26,7 @@ class Player:
         player_cards_print = f" Player: {self.name}, Cards : {self.cards}"
         print(player_cards_print)
 
-        while True:
-            number_wins = int(input("Guess number of rounds you win "))
-            if number_wins + guesses_before == turn:
-                print("Not a valid number of guesses ")
-            else:
-                break
-        
-        print(number_wins)
+        number_wins = int(input("Guess number of rounds you win ")
         self.guess = number_wins
         return number_wins
 
