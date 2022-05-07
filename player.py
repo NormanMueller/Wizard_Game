@@ -1,18 +1,19 @@
-from pickle import FALSE
+from typing import Dict,List,Type
+from cards import Cards
 
 
 class Player:
-    def __init__(self, name, position):
-        self.name = name
-        self.cards = []
-        self.guess = 0
-        self.card_in_play = None
-        self.winning_rounds = 0
-        self.points = 0
-        self.position = position
+    def __init__(self, name: str, position: int):
+        self.name: str = name
+        self.cards: Type[Cards] = []
+        self.guess: int = 0
+        self.card_in_play: Type[Cards] = None
+        self.winning_rounds: int = 0
+        self.points: int = 0
+        self.position: int = position
 
 
-    def draw_cards(self, turn, cards):
+    def draw_cards(self, turn: int, cards: Type[Cards]):
         try: 
             self.cards = [next(cards) for i in range(turn)]
         except StopIteration:
@@ -21,7 +22,7 @@ class Player:
 
 
 
-    def playerguess(self, turn, guesses_before)
+    def playerguess(self, turn: int, guesses_before: int) -> int: 
         player_cards_print = f" Player: {self.name}, Cards : {self.cards}"
         print(player_cards_print)
 
