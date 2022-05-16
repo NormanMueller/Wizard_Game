@@ -26,7 +26,7 @@ class Player:
         player_cards_print = f" Player: {self.name}, Cards : {self.cards}"
         print(player_cards_print)
 
-        number_wins = int(input("Guess number of rounds you win ")
+        number_wins = int(input("Guess number of rounds you win "))
         self.guess = number_wins
         return number_wins
 
