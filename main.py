@@ -127,12 +127,12 @@ class Game:
                 for player in self.player_list:
                     player.delete_card()
 
-            self.eval_player_points()
-            overall_score = self.overall_score()
-            print(overall_score)
+                self.eval_player_points()
+                overall_score = self.overall_score()
+                print(overall_score)
             self.cleanup_end_turn()
             self.turn += 1
-
-
-x = Game(3, ["norm", "nico", "damir"])
-x.main_method()
+            
+if __name__ == "__main__":
+    x = Game(3, ["norm", "nico", "damir"])
+    x.main_method()
