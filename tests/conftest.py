@@ -1,5 +1,5 @@
 import pytest
-from player import Player
+from src.Wizard_Game.player import Player
 
 
 @pytest.fixture()
