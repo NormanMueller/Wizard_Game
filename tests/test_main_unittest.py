@@ -3,11 +3,10 @@ from typing import Dict, List, Type
 import pytest
 from unittest import mock
 from pytest import MonkeyPatch
-from main import Game
-from player import Player
+from src.Wizard_Game.main import Game
+from src.Wizard_Game.player import Player
 import builtins
-from cards import Cards
-from main import Game
+from src.Wizard_Game.cards import Cards
 from unittest.mock import Mock, patch, MagicMock
 import unittest
 
