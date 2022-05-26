@@ -6,6 +6,7 @@ import collections
 import random
 from typing import Dict, Type, List
 
+
 class Game:
     def __init__(self, player_count_input, player_names, cards=Cards()):
         self.turn: int = 1
