@@ -6,9 +6,6 @@ import collections
 import random
 from typing import Dict, Type, List
 
-# to:DO decorator for prints , pytests impementation
-
-
 class Game:
     def __init__(self, player_count_input, player_names, cards=Cards()):
         self.turn: int = 1
