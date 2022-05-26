@@ -21,7 +21,10 @@ class Game:
 
     def create_player_instances(self):
         for player_nr in range(self.player_count_input):
-            self.player_list.append(Player(self.player_names[player_nr], player_nr))
+            self.player_list.append(
+                Player(
+                    self.player_names[player_nr],
+                    player_nr))
 
     def rotate_start_player(self):
         a_list = collections.deque(self.player_list)
@@ -40,7 +43,7 @@ class Game:
     def player_guess_number_wins(self):
         guesses_number = 0
         for player in self.player_list:
-                guesses_number += player.playerguess(self.turn, guesses_number)
+            guesses_number += player.playerguess(self.turn, guesses_number)
 
     def eval_which_player_wins_round(self) -> Type[Player]:
         get_start_player_card_type = self.player_list[0].card_in_play
@@ -52,9 +55,8 @@ class Game:
         if winner_through_wizard != []:
             winner = next(
                 filter(
-                    lambda x: x.name == winner_through_wizard[0].name, self.player_list
-                )
-            )
+                    lambda x: x.name == winner_through_wizard[0].name,
+                    self.player_list))
             winner.winning_rounds += 1
             return winner
 
@@ -74,7 +76,8 @@ class Game:
                 return True
 
         for player in self.player_list:
-            if check_if_player_guesses_are_right(player):  # right number of guesses
+            if check_if_player_guesses_are_right(
+                    player):  # right number of guesses
                 player.points += 20 + player.guess * 10
             elif player.winning_rounds != player.guess:  # wrong number of guesses
                 player.points -= abs(player.winning_rounds - player.guess) * 10
@@ -132,7 +135,8 @@ class Game:
                 print(overall_score)
             self.cleanup_end_turn()
             self.turn += 1
-            
+
+
 if __name__ == "__main__":
     x = Game(3, ["norm", "nico", "damir"])
     x.main_method()
