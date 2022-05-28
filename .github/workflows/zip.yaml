@@ -14,9 +14,8 @@ jobs:
           python-version: 3.8
       - name: Install libraries
         run: |
-            cd ..
             python -m pip install --upgrade pip
-            if [ -f requirements.txt ]; then pip install -r requirements.txt -t .; fi
+            pip install -r requirements.txt -t
       - name: Create zip bundle
         run: |
             cd src/Wizard_Game
