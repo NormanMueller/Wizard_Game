@@ -2,10 +2,9 @@ name: Zip
 
 on: push
 
-jobs:  
+jobs: 
   build:
     runs-on: ubuntu-latest
-    needs: lint
     steps:
       - name: Check out code
         uses: actions/checkout@v2
