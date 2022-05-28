@@ -1,7 +1,7 @@
 from pickle import NONE
 from turtle import position
-from  src.Wizard_Game.cards import Cards
-from  src.Wizard_Game.player import Player
+from src.Wizard_Game.cards import Cards
+from src.Wizard_Game.player import Player
 import collections
 import random
 from typing import Dict, Type, List
