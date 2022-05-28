@@ -1,5 +1,5 @@
 from typing import Dict, List, Type
-from cards import Cards
+from src.Wizard_Game.cards import Cards
 
 
 class Player:

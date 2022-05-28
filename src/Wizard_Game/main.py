@@ -1,12 +1,10 @@
 from pickle import NONE
 from turtle import position
-from cards import Cards
-from player import Player
+from src.Wizard_Game.cards import Cards
+from src.Wizard_Game.player import Player
 import collections
 import random
 from typing import Dict, Type, List
-
-# to:DO decorator for prints , pytests impementation
 
 
 class Game:

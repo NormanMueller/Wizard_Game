@@ -2,9 +2,8 @@ from typing import Dict, List, Type
 import pytest
 from unittest import mock
 from pytest import MonkeyPatch
-from player import Player
 import builtins
-from cards import Cards
+from src.Wizard_Game.cards import Cards
 
 
 class TestCards:
